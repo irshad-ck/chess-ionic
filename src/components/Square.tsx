@@ -27,7 +27,15 @@ const Square: React.FC<SquareProps> = ({
     <>
       {piece && (
         <span className={pieceClasses}>
-          <img className={`${piece == "bp" || piece == "wp" ? "h-[47px]" : "h-[55px]"}`} src={`/pieces/${currentTheme.type}/${piece}.svg`} alt={piece} />
+          <img
+            className={`${
+              piece == "bp" || piece == "wp"
+                ? "h-[22px] md:h-[47px]"
+                : "h-[25px] md:h-[55px]"
+            }`}
+            src={`/pieces/${currentTheme.type}/${piece}.svg`}
+            alt={piece}
+          />
         </span>
       )}
       {isValidMove ? (

@@ -10,3 +10,10 @@
 .messages-list::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
+.p-dropdown-trigger {
+  display: none;
+}
+
+.p-dropdown-items-wrapper {
+  max-height: 100% !important;
+}

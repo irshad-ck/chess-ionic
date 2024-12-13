@@ -9,7 +9,7 @@ export const ThemeSelector: React.FC = () => {
 
   return (
     <motion.div
-      className="flex space-x-2 bg-white/10 backdrop-blur-sm p-2 rounded-lg"
+      className="hidden md:flex space-x-2 bg-white/10 backdrop-blur-sm p-2 rounded-lg"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}

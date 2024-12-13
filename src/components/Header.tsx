@@ -1,19 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Settings } from "lucide-react";
+import { Icon, Settings } from "lucide-react";
 import { ThemeSelector } from "./ThemeSelector";
 import Tooltip from "./tooltip/Tooltip";
 import clsx from "clsx";
 import { useThemeStore } from "../store/useThemeStore";
 import { themes } from "../config/themes";
-
+import { Dropdown } from "primereact/dropdown";
+import { Theme } from "../types/chess";
+import * as Icons from "lucide-react";
 export const Header: React.FC = () => {
-  const { theme } = useThemeStore();
+  const { theme, setTheme } = useThemeStore();
   const currentTheme = themes.find((t) => t.type === theme)!;
   const logo =
     currentTheme.type === "neon" || currentTheme.type === "dark"
       ? "/logo-white.png"
       : "/logo-black.png";
+
   return (
     <motion.header
       className="w-full px-6 py-4 backdrop-blur-lg shadow-lg"
@@ -32,7 +35,7 @@ export const Header: React.FC = () => {
           transition={{ delay: 0.2 }}
         >
           <img src={logo} className="w-auto h-[60px]" />
-          <span className="mt-1">Next Move</span>
+          <span className="hidden md:flex mt-1">Next Move</span>
         </motion.h1>
 
         <div className="flex items-center">
