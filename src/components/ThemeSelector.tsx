@@ -1,14 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import * as Icons from 'lucide-react';
-import { themes } from '../config/themes';
-import { useThemeStore } from '../store/useThemeStore';
+import React from "react";
+import { motion } from "framer-motion";
+import * as Icons from "lucide-react";
+import { themes } from "../config/themes";
+import { useThemeStore } from "../store/useThemeStore";
 
 export const ThemeSelector: React.FC = () => {
   const { theme: currentTheme, setTheme } = useThemeStore();
 
   return (
-    <motion.div 
+    <motion.div
       className="flex space-x-2 bg-white/10 backdrop-blur-sm p-2 rounded-lg"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -22,8 +22,8 @@ export const ThemeSelector: React.FC = () => {
             onClick={() => setTheme(type)}
             className={`p-2 rounded-md transition-all relative ${
               currentTheme === type
-                ? 'bg-white/20 shadow-lg'
-                : 'hover:bg-white/10'
+                ? "bg-white/20 shadow-lg"
+                : "hover:bg-white/10"
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
