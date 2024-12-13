@@ -1,0 +1,7 @@
+{
+  "name": "chess-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
