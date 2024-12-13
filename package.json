@@ -11,6 +11,7 @@
     "test.unit": "vitest",
     "lint": "eslint",
     "dev:add": "ionic cap add android && ionic cap add ios",
+    "dev:open": "ionic cap open android && ionic cap open ios",
     "sync": "npx cap sync",
     "android": "npx cap run android",
     "ios": "npx cap run ios",
